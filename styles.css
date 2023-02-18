@@ -1,0 +1,79 @@
+body {
+  font-family: sans-serif;
+  background-color: lightgreen;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.game {
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 31%);
+  grid-template-rows: repeat(3, 31%);
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.game .area {
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.game-icon {
+  font-size: 3rem;
+  position: absolute;
+  filter: opacity(0);
+  -webkit-filter: opacity(0);
+  transition-duration: 0.1s;
+}
+
+.area.user-one-hover .times-icon,
+.area.user-two-hover .circle-icon {
+  filter: opacity(0.3);
+  -webkit-filter: opacity(0.3);
+}
+
+.area.user-one-click .times-icon,
+.area.user-two-click .circle-icon {
+  filter: opacity(1);
+  -webkit-filter: opacity(1);
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.932);
+  width: 100vw;
+  height: 100vh;
+}
+
+.layer h1 {
+  font-size: 3.5rem;
+}
+
+.layer button {
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  background-color: black;
+}
